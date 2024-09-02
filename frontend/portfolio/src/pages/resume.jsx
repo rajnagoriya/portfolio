@@ -7,13 +7,18 @@ export const Resume = () => {
   return (
     <div>
       {resume.link ? (
-        <iframe
-          src={resume.link}
-          title="Resume PDF"
-          width="100%"
-          height="600px"
-          background-color="#fff"
-        />
+        // <iframe
+        //   src={resume.link}
+        //   title="Resume PDF"
+        //   width="100%"
+        //   height="600px"
+        //   content='fit'
+        //   background-color="#fff"
+        // />
+        <img src={resume.link}
+        width="100%"
+          // height="600px"
+        alt="resume img" />
       ) : (
         <p>Loading resume...</p>
       )}
