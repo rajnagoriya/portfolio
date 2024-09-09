@@ -4,7 +4,7 @@ import "../style/profiles.css";
 import { UserDataContext } from "../contextApi/userContext";
 
 
-export const Profiles = () => {
+const Profiles = () => {
     const {profileLinks} = useContext(UserDataContext);
     return (
         <>
@@ -18,3 +18,5 @@ export const Profiles = () => {
         </>
     )
 }
+
+export default Profiles;

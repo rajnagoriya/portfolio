@@ -1,7 +1,7 @@
 import React, { useContext} from 'react';
 import { UserDataContext } from '../contextApi/userContext';
 
-export const Resume = () => {
+const Resume = () => {
   const {resume} = useContext(UserDataContext);
  
   return (
@@ -25,3 +25,5 @@ export const Resume = () => {
     </div>
   );
 };
+
+export default Resume;

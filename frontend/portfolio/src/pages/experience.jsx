@@ -3,7 +3,7 @@ import { useContext } from "react";
 import "../style/project.css";
 import { UserDataContext } from '../contextApi/userContext';
 
-export const Expirence = () => {
+const Expirence = () => {
     const {experience} = useContext(UserDataContext);
 
     return(
@@ -16,3 +16,4 @@ export const Expirence = () => {
         </>
     )
 }
+export default Expirence;

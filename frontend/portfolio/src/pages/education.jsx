@@ -4,7 +4,7 @@ import "../style/education.css";
 import { UserDataContext } from '../contextApi/userContext';
 
 
-export const Education = () => {
+const Education = () => {
   const {education} = useContext(UserDataContext);
 
   return (
@@ -29,5 +29,7 @@ export const Education = () => {
     </div>
   );
 };
+
+export default Education;
 
 

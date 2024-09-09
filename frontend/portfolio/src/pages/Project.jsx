@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import "../style/project.css";
 import { UserDataContext } from "../contextApi/userContext";
 
-export const Project = () => {
+const Project = () => {
     const {project} = useContext(UserDataContext);
 
     return(
@@ -16,3 +16,5 @@ export const Project = () => {
         </>
     )
 }
+
+export default Project;
