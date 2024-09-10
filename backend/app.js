@@ -17,7 +17,7 @@ import userRoute from "./src/routes/user.route.js";
 // Serve static files from the React app
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, '../frontend/portfolio')));  // Assuming 'client/build' is the folder where React app is built
-
+app.use('/public', express.static(path.join(__dirname, 'public')));
 // API routes
 app.use("/user", userRoute);
 

@@ -7,18 +7,14 @@ const Resume = () => {
   return (
     <div>
       {resume.link ? (
-        // <iframe
-        //   src={resume.link}
-        //   title="Resume PDF"
-        //   width="100%"
-        //   height="600px"
-        //   content='fit'
-        //   background-color="#fff"
-        // />
-        <img src={resume.link}
-        width="100%"
-          // height="600px"
-        alt="resume img" />
+        <iframe
+        src={`${import.meta.env.VITE_SERVER}/public/Raj_resume.pdf`}
+          title="Resume PDF"
+          width="100%"
+          height="600px"
+          content='fit'
+          background-color="#fff"
+        />
       ) : (
         <p>Loading resume...</p>
       )}
