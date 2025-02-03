@@ -94,9 +94,9 @@ function ProjectPage() {
 
   return (
     <div
-    className=" bg-black  w-screen px-8 relative"
+    className=" bg-black w-screen px-8 relative"
   >
-    <div className="shadow-lg  h-full w-full rounded-3xl bg-cover bg-black
+    <div className="shadow-lg  h-full w-full rounded-3xl bg-cover 
         p-[5vw]">
       <h2 id="projectHeadin" className="capitalize text-[4rem] sm:text-[5rem] md:text-[5rem] lg:text-[5rem] font-[anzo3] font-bold text-white text-start underline">
       Projects

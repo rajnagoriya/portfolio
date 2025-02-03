@@ -52,8 +52,8 @@ function SkillsPage() {
   });
 
   return (
-    <div className="bg-black w-screen px-8 py-16">
-      <div className="shadow-lg h-full w-full rounded-3xl bg-cover bg-black p-[5vw]">
+    <div className="bg-black w-screen px-8">
+      <div className="shadow-lg h-full w-full rounded-3xl bg-cover p-[5vw]">
         <h2 id="projectHeading" className="capitalize text-[4rem] sm:text-[5rem] md:text-[5rem] lg:text-[5rem] font-[anzo3] font-bold text-white text-start underline">
           skills
         </h2>
