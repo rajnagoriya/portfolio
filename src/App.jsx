@@ -25,31 +25,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-// import Header from "./components/header";
-// import ContactPage from "./pages/ContactPage";
-// import ExpirencePage from "./pages/ExpirencePage";
-// import Page1 from "./pages/page1";
-// import ProjectPage from "./pages/ProjectPage";
-// import SkillsPage from "./pages/SkillsPage";
-
-
-// function App() {
-
-//   return (
-//    <>
-//     <Header/>
-//     <Page1/>
-//     <SkillsPage/>
-//     <ProjectPage/>
-//     <ExpirencePage/>
-//     <ContactPage/>
-//     </>
-//   )
-// }
-
-// export default App;

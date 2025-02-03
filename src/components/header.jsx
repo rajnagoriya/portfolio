@@ -23,21 +23,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
-
-
-
-// import 'remixicon/fonts/remixicon.css'
-
-// const Header = () => {
-//   return (
-//     <div className="fixed w-full z-10 p-20 flex items-center justify-end">
-//     <button className="bg-black px-4 py-2 border-slate-500 font-[anzo3] text-white">Hire Me</button>
-//     {/* <i className="ri-more-2-fill text-4xl ml-3 bg-black rounded-full p-[5px]"></i> */}
-//     </div>
-//   )
-// }
-
-// export default Header
