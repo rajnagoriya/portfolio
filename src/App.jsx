@@ -1,12 +1,12 @@
 import { Suspense, lazy } from "react";
-import Header from "./components/Header";
-import FullPageLoader from "./components/FullPageLoader";
+import Header from "./components/Header.jsx";
+import FullPageLoader from "./components/FullPageLoader.jsx";
 
-const Page1 = lazy(() => import("./pages/page1"));
-const SkillsPage = lazy(() => import("./pages/SkillsPage"));
-const ProjectPage = lazy(() => import("./pages/ProjectPage"));
-const ExpirencePage = lazy(() => import("./pages/ExpirencePage"));
-const ContactPage = lazy(() => import("./pages/ContactPage"));
+const Page1 = lazy(() => import("./pages/page1.jsx"));
+const SkillsPage = lazy(() => import("./pages/SkillsPage.jsx"));
+const ProjectPage = lazy(() => import("./pages/ProjectPage.jsx"));
+const ExpirencePage = lazy(() => import("./pages/ExpirencePage.jsx"));
+const ContactPage = lazy(() => import("./pages/ContactPage.jsx"));
 
 function App() {
   return (
