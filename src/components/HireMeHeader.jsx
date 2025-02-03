@@ -1,6 +1,6 @@
 import 'remixicon/fonts/remixicon.css';
 
-const Header = () => {
+const HireMeHeader = () => {
   
   // Function to scroll to the bottom
   const scrollToBottom = () => {
@@ -22,4 +22,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HireMeHeader;

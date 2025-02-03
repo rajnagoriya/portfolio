@@ -1,6 +1,6 @@
 import { Suspense, lazy } from "react";
 import FullPageLoader from "./components/FullPageLoader.jsx";
-const Header = lazy(() => import("./components/Header.jsx") )
+const HireMeHeader = lazy(() => import("./components/HireMeHeader.jsx") )
 const Page1 = lazy(() => import("./pages/page1.jsx"));
 const SkillsPage = lazy(() => import("./pages/SkillsPage.jsx"));
 const ProjectPage = lazy(() => import("./pages/ProjectPage.jsx"));
@@ -12,7 +12,7 @@ function App() {
     <>
       
       <Suspense fallback={<FullPageLoader/>}>
-      <Header />
+      <HireMeHeader />
         <Page1 />
         <SkillsPage />
         <ProjectPage />
