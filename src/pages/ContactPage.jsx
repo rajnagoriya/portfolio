@@ -1,4 +1,4 @@
-import { AiFillLinkedin, AiFillTwitterCircle, AiOutlineMail } from "react-icons/ai";
+import { AiFillLinkedin, AiFillTwitterCircle, AiOutlineMail, AiFillGithub } from "react-icons/ai";
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import { useGSAP } from "@gsap/react";
@@ -99,37 +99,46 @@ function ContactPage() {
   }, []);
 
   return (
-    <div className="bg-black w-screen px-8 relative">
-      <div className="h-full w-full rounded-3xl bg-cover bg-black p-[5vw]">
+    <div className="bg-palette-dark w-screen px-8 relative">
+      <div className="h-full w-full rounded-3xl bg-cover p-[5vw]">
         
-        <h2 id="contactHeading" className="capitalize text-[4rem] sm:text-[5rem] md:text-[5rem] lg:text-[5rem] font-[anzo3] font-bold text-white text-start underline">
+        <h2 id="contactHeading" className="capitalize text-[4rem] sm:text-[5rem] md:text-[5rem] lg:text-[5rem] font-[anzo3] font-bold text-palette-cream text-start underline decoration-palette-medium">
         Contact Me
         </h2>
         <div className="w-full p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 rounded-xl">
           {/* Social Links Section */}
-          <div className="flex flex-col justify-center items-center p-6 rounded-lg shadow-md font-[anzo3]">
+          <div className="flex flex-col justify-center items-center p-6 rounded-lg  font-[anzo3]">
             <div id="socialLinks" className="flex flex-col gap-4">
               <a
                 href="https://www.linkedin.com/in/raj-nagoriya/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="socialLinksA flex items-center text-white text-lg hover:text-blue-500 transition"
+                className="socialLinksA flex items-center text-palette-cream text-lg hover:text-palette-light transition"
               >
                 <AiFillLinkedin className="text-3xl mr-3" />
                 LinkedIn
               </a>
               <a
+                href="https://github.com/rajnagoriya"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="socialLinksA flex items-center text-palette-cream text-lg hover:text-palette-light transition"
+              >
+                <AiFillGithub className="text-3xl mr-3" />
+                GitHub
+              </a>
+              <a
                 href="https://x.com/Raj_Nagoriya03"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="socialLinksA flex items-center text-white text-lg hover:text-blue-400 transition"
+                className="socialLinksA flex items-center text-palette-cream text-lg hover:text-palette-light transition"
               >
                 <AiFillTwitterCircle className="text-3xl mr-3" />
                 Twitter
               </a>
               <a
                 href="mailto:rajnagoriya3@email.com"
-                className="socialLinksA flex items-center text-white text-lg hover:text-red-400 transition"
+                className="socialLinksA flex items-center text-palette-cream text-lg hover:text-palette-light transition"
               >
                 <AiOutlineMail className="text-3xl mr-3" />
                 rajnagoriya3@email.com
@@ -138,8 +147,8 @@ function ContactPage() {
           </div>
 
           {/* Contact Form Section */}
-          <div id="contactForm" className="p-6 rounded-lg shadow-md font-[anzo3]">
-            <h3 className="text-xl font-semibold text-white mb-4">Send a Message</h3>
+          <div id="contactForm" className="p-6 rounded-lg   font-[anzo3]">
+            <h3 className="text-xl font-semibold text-palette-cream mb-4">Send a Message</h3>
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               <input
                 type="text"
@@ -147,7 +156,7 @@ function ContactPage() {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Your Name"
-                className="p-3 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500"
+                className="p-3 rounded-md bg-palette-dark/50 border border-palette-light/40 text-palette-cream placeholder-palette-light/60 focus:outline-none focus:ring-2 focus:ring-palette-medium focus:border-palette-medium"
                 required
               />
               <input
@@ -156,7 +165,7 @@ function ContactPage() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Your Email"
-                className="p-3 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500"
+                className="p-3 rounded-md bg-palette-dark/50 border border-palette-light/40 text-palette-cream placeholder-palette-light/60 focus:outline-none focus:ring-2 focus:ring-palette-medium focus:border-palette-medium"
                 required
               />
               <textarea
@@ -165,12 +174,12 @@ function ContactPage() {
                 onChange={handleChange}
                 rows="4"
                 placeholder="Your Message"
-                className="p-3 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500"
+                className="p-3 rounded-md bg-palette-dark/50 border border-palette-light/40 text-palette-cream placeholder-palette-light/60 focus:outline-none focus:ring-2 focus:ring-palette-medium focus:border-palette-medium"
                 required
               ></textarea>
               <button
                 type="submit"
-                className="bg-blue-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition disabled:opacity-50"
+                className=" text-palette-cream font-semibold py-2 px-4 rounded-md bg-palette-dark border border-palette-light/40 transition disabled:opacity-50"
                 disabled={loading}
               >
                 {loading ? "Sending..." : "Send Message"}

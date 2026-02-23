@@ -1,0 +1,146 @@
+[
+  {
+    "id": "proj-1",
+    "heading": "Service101 — Automotive Workshop SaaS",
+    "tag": "Production SaaS",
+    "description": [
+      "Developed core frontend features for an automotive workshop management SaaS platform.",
+      "Contributed to migration from monolithic architecture to microservices.",
+      "Implemented SEO optimization using Server-Side Rendering (SSR) in Next.js.",
+      "Collaborated with global teams in agile sprints and translated Figma designs into scalable UI."
+    ],
+    "technology": [
+      "Next.js",
+      "React",
+      "Supabase",
+      "PostgreSQL",
+      "Microservices",
+      "SSR",
+      "Tailwind CSS"
+    ],
+    "link": "https://service101.com/"
+  },
+  {
+    "id": "proj-2",
+    "heading": "LexHost — AI Powered Legal Insights Platform",
+    "tag": "AI SaaS",
+    "description": [
+      "Built dynamic UI components and role-based access systems.",
+      "Designed structured database workflows using Supabase.",
+      "Improved platform usability through optimized expert insights UI.",
+      "Worked in a collaborative international product environment."
+    ],
+    "technology": [
+      "Next.js",
+      "React",
+      "Supabase",
+      "PostgreSQL",
+      "Authentication",
+      "Tailwind CSS"
+    ],
+    "link": "https://lexhost.com/"
+  },
+  {
+    "id": "proj-3",
+    "heading": "Translate-a-Bill — AI Contract Translator",
+    "tag": "AI Product",
+    "description": [
+      "Implemented multilingual localization using i18next.",
+      "Improved accessibility of legal and billing documents with optimized UX.",
+      "Built scalable frontend workflows integrated with Supabase backend.",
+      "Collaborated with international stakeholders during product delivery."
+    ],
+    "technology": [
+      "Next.js",
+      "React",
+      "Supabase",
+      "i18Next",
+      "Localization",
+      "Tailwind CSS"
+    ],
+    "link": "https://translateabill.com/"
+  },
+  {
+    "id": "proj-4",
+    "heading": "Worzo Electric Scooters — E-commerce & Admin Dashboard",
+    "tag": "Client Project",
+    "description": [
+      "Built an e-commerce platform with secure admin dashboard for product management.",
+      "Implemented authentication and CMS features for real-time website content control.",
+      "Developed scalable backend APIs using MERN stack.",
+      "Improved operational workflow through centralized admin controls."
+    ],
+    "technology": [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Tailwind CSS",
+      "REST API"
+    ],
+    "link": "https://worzo.in/"
+  },
+  {
+    "id": "proj-5",
+    "heading": "Ved Tour & Travels — Travel Listing Platform",
+    "tag": "Client Project",
+    "description": [
+      "Developed travel listing platform with admin panel for trip and blog management.",
+      "Created workflows for package creation, gallery uploads, and content publishing.",
+      "Improved responsiveness and UI performance using React and Tailwind CSS.",
+      "Enabled easy content management through custom dashboard features."
+    ],
+    "technology": [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "REST API"
+    ],
+    "link": "https://vedtourandtravels.in/"
+  },
+  {
+    "id": "proj-6",
+    "heading": "AI Email Automation System",
+    "tag": "Backend / AI",
+    "description": [
+      "Developed AI-powered email automation using Cohere AI and Google OAuth2.",
+      "Implemented background job processing using BullMQ and Redis.",
+      "Built context-aware automated replies reducing manual workflow effort.",
+      "Designed scalable REST APIs for asynchronous email processing."
+    ],
+    "technology": [
+      "Node.js",
+      "Express.js",
+      "Redis",
+      "BullMQ",
+      "Cohere AI",
+      "Google OAuth2",
+      "REST API"
+    ],
+    "link": "https://github.com/rajnagoriya/emailAutomation"
+  },
+  {
+    "id": "proj-7",
+    "heading": "Real-Time Chat Application",
+    "tag": "Fullstack",
+    "description": [
+      "Built scalable real-time chat system supporting private and group messaging.",
+      "Implemented typing indicators and instant delivery using Socket.io.",
+      "Optimized database operations for real-time performance.",
+      "Designed responsive UI using Next.js and Tailwind CSS."
+    ],
+    "technology": [
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "MySQL",
+      "Prisma",
+      "Socket.io",
+      "Tailwind CSS"
+    ],
+    "link": "https://client-chat-app-raj-nagoriyas-projects.vercel.app/login"
+  }
+]

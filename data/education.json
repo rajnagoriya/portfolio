@@ -1,0 +1,18 @@
+[
+  {
+    "id": "edu-1",
+    "degree": "BCA",
+    "institution": "Govt. Holkar Science College",
+    "grade": "CGPA: 7.40",
+    "location": "Indore, India",
+    "date": "Jun-2022 to May-2025"
+  },
+  {
+    "id": "edu-2",
+    "degree": "MCA",
+    "institution": "Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV)",
+    "grade": "",
+    "location": "",
+    "date": "Jun-2025 to Present"
+  }
+]

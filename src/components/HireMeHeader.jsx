@@ -13,8 +13,8 @@ const HireMeHeader = () => {
   return (
     <div className="fixed w-full z-10 p-20 flex items-center justify-end">
       <button 
-        className="bg-black px-4 py-2 border-slate-500 font-[anzo3] text-white"
-        onClick={scrollToBottom} // Call function on click
+        className="bg-palette-light hover:opacity-90 px-4 py-2 border-2 border-palette-light font-[anzo3] text-palette-dark transition-all"
+        onClick={scrollToBottom}
       >
         Hire Me
       </button>

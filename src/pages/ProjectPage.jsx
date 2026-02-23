@@ -2,44 +2,12 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import ProjectCard from "../components/ProjectCard";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import { usePortfolioData } from "../context/PortfolioDataContext.jsx";
 gsap.registerPlugin(ScrollTrigger);
 
-const projects = [
-  {
-    heading: "Real Time Chat Web App",
-    tag: "Fullstack",
-    discription: ["Built a real-time chat application using Next.js, Node.js, and MySQL.",
-      "Integrated one-on-one and group chats with notifications",
-      "Designed for scalability and seamless user interaction.",
-      "chatting one-on-one or in a group, RealTimeX ensures instant message delivery, typing indicators, read receipts, and media sharing for an uninterrupted experience."
-    ],
-    technology: ["Nextjs", "Tailwind CSS", "shadcn ui","nodejs","expressjs","prisma","mysql","socket.io","rest Api"],
-    link: "https://client-chat-app-raj-nagoriyas-projects.vercel.app/login",
-    img: "https://cdn.pixabay.com/photo/2016/11/30/18/14/chat-1873543_1280.png",
-  },
-  {
-    heading: "Email Automation with AI",
-    tag: "Backend",
-    discription: ["Developed an AI-powered email response system using Cohere AI and Google OAuth2.",
-      "Implemented task scheduling and real-time caching with BullMQ and Redis",
-      "give automatic reply based on the intrest of user in our product."
-    ],
-    technology: ["Node.js", "Express.js", "redis","BullMQ","Google OAuth2", "Cohere AI Api","Rest Api"],
-    link: "https://github.com/rajnagoriya/emailAutomation",
-    img: "https://cdn.pixabay.com/photo/2018/03/22/02/37/email-3249062_1280.png",
-  },
-  {
-    heading: "airbnb clone",
-    tag: "Fullstack",
-    discription: ["Built an Airbnb-like platform with authentication and CRUD operations.","Hosts can list properties, and travelers can book with ease.","Secure login & registration system.","Accessible on all devices for a smooth experience."],
-    technology: [ "Node.js", "expressjs", "MongoDB","Tailwind Css","ejs","jwt","rest Api"],
-    link: "https://airbnb-qkcc.onrender.com/",
-    img: "https://cdn.pixabay.com/photo/2018/05/08/21/28/airbnb-3384008_1280.png",
-  }
-];
-
 function ProjectPage() {
+  const { projects } = usePortfolioData();
   const [filteredProjects, setFilteredProjects] = useState(projects);
   const projectRefs = useRef([]);
 
@@ -83,6 +51,10 @@ function ProjectPage() {
     });
   }, [filteredProjects]);
 
+  useEffect(() => {
+    setFilteredProjects(projects);
+  }, [projects]);
+
   // Filter function
   const findThisTypeProjects = (e) => {
     if (e.target.value === "All") {
@@ -92,35 +64,36 @@ function ProjectPage() {
     }
   };
 
+  const uniqueTags = [...new Set(projects.map((p) => p.tag).filter(Boolean))];
+
   return (
     <div
-    className=" bg-black w-screen px-8 relative"
+    className="bg-palette-light w-screen px-8 relative"
   >
-    <div className="shadow-lg  h-full w-full rounded-3xl bg-cover 
-        p-[5vw]">
-      <h2 id="projectHeadin" className="capitalize text-[4rem] sm:text-[5rem] md:text-[5rem] lg:text-[5rem] font-[anzo3] font-bold text-white text-start underline">
+    <div className="h-full w-full rounded-3xl bg-cover p-[5vw]">
+      <h2 id="projectHeadin" className="capitalize text-[4rem] sm:text-[5rem] md:text-[5rem] lg:text-[5rem] font-[anzo3] font-bold text-palette-dark text-start underline decoration-palette-dark">
       Projects
         </h2>
       <div className="w-full pt-10">
         <div className="w-full flex">
-          <p className="text-[1.2rem] capitalize font-[anzo3]">Select by Tech:</p>
+          <p className="text-[1.2rem] capitalize font-[anzo3] text-palette-dark">Filter by:</p>
           <select
             name="project_type"
             id="projectType"
             onChange={findThisTypeProjects}
-            className="text-white font-[anzo3] ml-3"
+            className="text-palette-dark bg-palette-cream/80 border border-palette-dark/40 rounded-lg px-3 py-1 font-[anzo3] ml-3 focus:outline-none focus:ring-2 focus:ring-palette-medium"
           >
             <option value="All">All</option>
-            {/* <option value="Frontend">Frontend</option> */}
-            <option value="Backend">Backend</option>
-            <option value="Fullstack">FullStack</option>
+            {uniqueTags.map((tag) => (
+              <option key={tag} value={tag}>{tag}</option>
+            ))}
           </select>
         </div>
 
         {/* Project Cards */}
         <div className="project-container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-5">
           {filteredProjects.map((project, index) => (
-            <div key={index} ref={(el) => (projectRefs.current[index] = el)}>
+            <div key={project.id ?? index} ref={(el) => (projectRefs.current[index] = el)}>
               <ProjectCard {...project} />
             </div>
           ))}

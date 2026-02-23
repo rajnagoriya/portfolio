@@ -34,7 +34,7 @@ function Page1() {
 
   return (
     <div
-      className="h-screen bg-black w-screen relative overflow-hidden"
+      className="h-screen bg-palette-dark w-screen relative overflow-hidden"
       onMouseMove={(e) => {
         mouseMoving(e);
       }}
@@ -46,8 +46,8 @@ function Page1() {
       >
         <TiltText tltRef={tiltRef} />
         
-        <div className="mt-10 font-[anzo6] flex justify-end items-end font-bold  w-full h-[100px] text-white">
-          <h3 className="brightness-200 font-[anzo6]">
+        <div className="mt-10 font-[anzo6] flex justify-end items-end font-bold  w-full h-[100px] text-palette-cream">
+          <h3 className="font-[anzo6]">
             Let’s Build Something Great Together
           </h3>
         </div>

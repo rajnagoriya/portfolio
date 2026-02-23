@@ -1,0 +1,64 @@
+[
+  {
+    "id": "exp-1",
+    "role": "Full-Stack Developer",
+    "type": "Remote",
+    "company": "Exp141 AI",
+    "description": [
+      "Worked on SaaS platforms including Service101, LexHost, and Translate-a-Bill.",
+      "Implemented SEO optimization using Server Side Rendering (SSR) in Next.js improving search visibility.",
+      "Built dashboards, role-based access systems, and document workflows using Supabase and PostgreSQL.",
+      "Collaborated with international stakeholders (USA, UK) in agile sprint delivery cycles."
+    ],
+    "technology": [
+      "Next.js",
+      "React",
+      "Node.js",
+      "Supabase",
+      "PostgreSQL",
+      "SSR",
+      "REST APIs",
+      "Git"
+    ],
+    "date": "May-2025 to Present"
+  },
+  {
+    "id": "exp-2",
+    "role": "Full-Stack Developer Intern",
+    "type": "Onsite",
+    "company": "Vyanwebs Pvt. Ltd.",
+    "description": [
+      "Built MERN stack applications with authentication and admin dashboards.",
+      "Improved UI performance and responsiveness by 35%.",
+      "Converted Figma designs into reusable React components reducing development time."
+    ],
+    "technology": [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "JWT",
+      "REST APIs",
+      "Git"
+    ],
+    "date": "Feb-2025 to Apr-2025"
+  },
+  {
+    "id": "exp-3",
+    "role": "Frontend Developer Intern",
+    "type": "Onsite",
+    "company": "Coding Expert",
+    "description": [
+      "Developed modular UI components using React.js and Tailwind CSS.",
+      "Improved loading performance by 25% using lazy loading and code splitting."
+    ],
+    "technology": [
+      "React",
+      "Tailwind CSS",
+      "JavaScript",
+      "Git"
+    ],
+    "date": "Nov-2024 to Dec-2024"
+  }
+]
