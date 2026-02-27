@@ -48,8 +48,8 @@ function EducationPage() {
   }, [education]);
 
   return (
-    <div className="bg-palette-cream w-screen px-8 relative overflow-hidden">
-      <div className="h-full w-full rounded-3xl bg-cover p-[5vw]">
+    <div className="bg-palette-cream w-screen px-2 pb-8 md:px-8 md:pb-20 relative overflow-hidden">
+      <div className="h-full w-full rounded-3xl bg-cover ">
         <h2
           id="educationHeading"
           className="capitalize text-[4rem] sm:text-[5rem] md:text-[5rem] lg:text-[5rem] font-[anzo3] font-bold text-palette-dark text-start underline decoration-palette-dark"

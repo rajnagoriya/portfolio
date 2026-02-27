@@ -9,7 +9,10 @@ gsap.registerPlugin(ScrollTrigger);
 function ProjectPage() {
   const { projects } = usePortfolioData();
   const [filteredProjects, setFilteredProjects] = useState(projects);
+  const [showAll, setShowAll] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
   const projectRefs = useRef([]);
+  const showToggleRef = useRef(null);
 
 
 //  Animation for Heading
@@ -55,6 +58,15 @@ function ProjectPage() {
     setFilteredProjects(projects);
   }, [projects]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 768); // < md
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   // Filter function
   const findThisTypeProjects = (e) => {
     if (e.target.value === "All") {
@@ -62,15 +74,36 @@ function ProjectPage() {
     } else {
       setFilteredProjects(projects.filter((project) => project.tag === e.target.value));
     }
+    setShowAll(false);
   };
 
   const uniqueTags = [...new Set(projects.map((p) => p.tag).filter(Boolean))];
 
+  const displayedProjects =
+    isSmallScreen && !showAll ? filteredProjects.slice(0, 2) : filteredProjects;
+
+  const handleToggleShowAll = () => {
+    setShowAll((prev) => {
+      const wasExpanded = prev;
+      const next = !prev;
+      if (wasExpanded && showToggleRef.current) {
+        // After collapsing, scroll back to the toggle button
+        setTimeout(() => {
+          showToggleRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, 0);
+      }
+      return next;
+    });
+  };
+
   return (
     <div
-    className="bg-palette-light w-screen px-8 relative"
+    className="bg-palette-light w-screen px-2 pb-8 md:px-8 md:pb-20 relative"
   >
-    <div className="h-full w-full rounded-3xl bg-cover p-[5vw]">
+    <div className="h-full w-full rounded-3xl bg-cover ">
       <h2 id="projectHeadin" className="capitalize text-[4rem] sm:text-[5rem] md:text-[5rem] lg:text-[5rem] font-[anzo3] font-bold text-palette-dark text-start underline decoration-palette-dark">
       Projects
         </h2>
@@ -92,12 +125,23 @@ function ProjectPage() {
 
         {/* Project Cards */}
         <div className="project-container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-5">
-          {filteredProjects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <div key={project.id ?? index} ref={(el) => (projectRefs.current[index] = el)}>
               <ProjectCard {...project} />
             </div>
           ))}
         </div>
+
+        {isSmallScreen && filteredProjects.length > 2 && (
+          <div className="mt-6 flex justify-center" ref={showToggleRef}>
+            <button
+              onClick={handleToggleShowAll}
+              className="px-4 py-2 rounded-lg bg-palette-dark text-palette-cream text-sm font-[anzo3] border border-palette-dark hover:bg-palette-medium hover:text-palette-dark transition-all"
+            >
+              {showAll ? "Show Less" : "Show More"}
+            </button>
+          </div>
+        )}
       </div>
     </div>
     </div>
