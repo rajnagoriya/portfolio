@@ -3,9 +3,6 @@ import EducationCard from "../components/EducationCard";
 import gsap from "gsap";
 import { useRef } from "react";
 import { usePortfolioData } from "../context/PortfolioDataContext.jsx";
-import { ScrollTrigger } from "gsap/all";
-
-gsap.registerPlugin(ScrollTrigger);
 
 function EducationPage() {
   const { education } = usePortfolioData();
@@ -17,11 +14,6 @@ function EducationPage() {
       opacity: 0,
       duration: 3,
       ease: "power4.out",
-      scrollTrigger: {
-        trigger: "#educationHeading",
-        start: "top 85%",
-        toggleActions: "play none none reverse",
-      },
     });
   });
 
@@ -36,11 +28,6 @@ function EducationPage() {
             opacity: 1,
             duration: 0.8,
             ease: "power3.out",
-            scrollTrigger: {
-              trigger: el,
-              start: "top 80%",
-              toggleActions: "play none none reverse",
-            },
           }
         );
       }

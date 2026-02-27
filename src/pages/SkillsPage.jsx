@@ -1,23 +1,16 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 import { usePortfolioData } from "../context/PortfolioDataContext.jsx";
 
 function SkillsPage() {
   const { skills } = usePortfolioData();
-  gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
     gsap.from("#projectHeading", {
       rotateY: -90,
       duration: 3,
       opacity: 0,
-      ease: 'power4.out',
-      scrollTrigger: {
-        trigger: "#projectHeading",
-        start: 'top 85%',
-        toggleActions: "play none none reverse",
-      }
+      ease: "power4.out",
     });
   });
 
@@ -31,18 +24,13 @@ function SkillsPage() {
         duration: 1.5,
         stagger: 0.2,
         ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".skills-container",
-          start: "top 85%",
-          toggleActions: "play none none reverse",
-        },
       }
     );
   }, [skills]);
 
   return (
-    <div className="bg-palette-medium w-screen px-8">
-      <div className="h-full w-full rounded-3xl bg-cover p-[5vw]">
+    <div className="bg-palette-medium w-screen px-2 pb-8 md:px-8 md:pb-20 relative">
+      <div className="h-full w-full rounded-3xl bg-cover ">
         <h2 id="projectHeading" className="capitalize text-[4rem] sm:text-[5rem] md:text-[5rem] lg:text-[5rem] font-[anzo3] font-bold text-palette-dark text-start underline decoration-palette-dark">
           skills
         </h2>

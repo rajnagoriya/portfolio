@@ -3,9 +3,7 @@ import { useState } from "react";
 import emailjs from "emailjs-com";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import toast from "react-hot-toast";
-gsap.registerPlugin(ScrollTrigger);
 
 function ContactPage() {
   const [formData, setFormData] = useState({
@@ -59,11 +57,6 @@ function ContactPage() {
       opacity: 0,
       duration: 3,
       ease: "power4.out",
-      scrollTrigger: {
-        trigger: "#contactHeading",
-        start: "top 85%",
-        toggleActions: "play none none reverse",
-      },
     });
   }, []);
 
@@ -73,13 +66,7 @@ function ContactPage() {
       y: 20,
       opacity: 0,
       duration: 1.2,
-      stagger: 0.3, // Smooth stagger effect
       ease: "back.out(1.7)", // More natural bounce effect
-      scrollTrigger: {
-        trigger: "#socialLinks",
-        start: "top 80%",
-        toggleActions: "play none none reverse",
-      },
     });
   }, []);
 
@@ -90,17 +77,12 @@ function ContactPage() {
       opacity: 0,
       duration: 1.5,
       ease: "power3.out",
-      scrollTrigger: {
-        trigger: "#contactForm",
-        start: "top 65%",
-        toggleActions: "play none none reverse",
-      },
     });
   }, []);
 
   return (
-    <div className="bg-palette-dark w-screen px-8 relative">
-      <div className="h-full w-full rounded-3xl bg-cover p-[5vw]">
+    <div className="bg-palette-dark w-screen px-2 md:pb-8 md:px-8 relative">
+      <div className="h-full w-full rounded-3xl bg-cover ">
         
         <h2 id="contactHeading" className="capitalize text-[4rem] sm:text-[5rem] md:text-[5rem] lg:text-[5rem] font-[anzo3] font-bold text-palette-cream text-start underline decoration-palette-medium">
         Contact Me
@@ -145,8 +127,10 @@ function ContactPage() {
               </a>
             </div>
           </div>
-
-          {/* Contact Form Section */}
+<div className="flex flex-col justify-center items-center p-2 md:p-4 rounded-lg  font-[anzo3] bg-palette-dark text-palette-cream border-2 border-palette-light font-bold">
+  Hire me and build something great together!
+  </div>
+          {/* Contact Form Section
           <div id="contactForm" className="p-6 rounded-lg   font-[anzo3]">
             <h3 className="text-xl font-semibold text-palette-cream mb-4">Send a Message</h3>
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -185,7 +169,7 @@ function ContactPage() {
                 {loading ? "Sending..." : "Send Message"}
               </button>
             </form>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
